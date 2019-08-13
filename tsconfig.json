@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": true, // 是否允许js语法再ts环境运行
+    "jsx": "react",
+    "esModuleInterop": true,
+  },
+  "include": [
+    "./src/*"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
+}
