@@ -4,19 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --colors --progress --config webpack.dev.js"
+    "test": "react-scripts-ts test --env=jsdom",
+    "dev": "OEM=$npm_package_config_oem webpack-dev-server --colors --progress --config webpack.dev.js",
+    "test-dev": "OEM=$npm_package_config_oem NODE_ENV=production webpack-dev-server --colors --progress --config webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --colors --config webpack.dev.js",
+    "set-oem": "npm config set demo:oem",
+    "rewrite": "node scripts/fstest",
+    "test-new": "node scripts/testNewFile"
+  },
+  "config": {
+    "oem": ""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/html-webpack-plugin": "^3.2.1",
     "@types/react-dom": "^16.8.5",
+    "@types/webpack": "^4.32.1",
+    "@types/webpack-env": "^1.14.0",
     "antd": "^3.21.4",
     "babel-core": "^6.26.3",
     "babel-loader": "7",
     "babel-plugin-import": "^1.12.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.2.0",
     "css-loader": "^3.2.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
@@ -24,6 +36,7 @@
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.11",
     "react-router-dom": "^5.0.1",
+    "react-scripts-ts": "^3.1.0",
     "sass-loader": "^7.2.0",
     "style-loader": "^1.0.0",
     "ts-loader": "^6.0.4",
