@@ -7,7 +7,7 @@ import { App } from './containers/App';
 const rootEl = document.getElementById('root');
 
 function renderApp() {
-  console.log(process.env.oem)
+  console.log(process.env.oem);
   ReactDOM.render(
     <AppContainer>
       <App/>
