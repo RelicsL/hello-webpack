@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "react-scripts-ts test --env=jsdom",
-    "dev": "OEM=$npm_package_config_oem webpack-dev-server --colors --progress --config webpack.dev.js",
-    "test-dev": "OEM=$npm_package_config_oem NODE_ENV=production webpack-dev-server --colors --progress --config webpack.dev.js",
+    "dev": "OEM=$npm_package_config_oem webpack-dev-server --colors --progress --open --config webpack.dev.js",
+    "test-dev": "OEM=$npm_package_config_oem NODE_ENV=production webpack-dev-server --colors --progress --open --config webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --colors --config webpack.dev.js",
     "set-oem": "npm config set demo:oem",
     "rewrite": "node scripts/fstest",
@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/html-webpack-plugin": "^3.2.1",
+    "@types/ip": "^1.1.0",
     "@types/react-dom": "^16.8.5",
     "@types/webpack": "^4.32.1",
     "@types/webpack-env": "^1.14.0",

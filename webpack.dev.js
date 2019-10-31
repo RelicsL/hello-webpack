@@ -5,6 +5,8 @@ const package = require('./package.json');
 const oem = process.env.OEM ? process.env.OEM : 'default';
 console.log('oem is ' + oem);
 const NODE_ENV = process.env.NODE_ENV || 'development';
+// const ip = require('ip');
+// const ipAdress = ip.address();
 console.log(NODE_ENV);
 
 const config = {
@@ -21,6 +23,7 @@ const config = {
   devServer: {
     hot: true,
     port: 2333,
+    // host: ipAdress,
     // progress: true,  //运行进度打印在控制台
     historyApiFallback: true, //404响应被替代为index.html
     overlay: { //浏览器全屏显示警告和错误
